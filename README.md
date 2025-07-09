@@ -40,6 +40,15 @@ Hey, Netology
 </html>
 ```
 
+1. Создаём папку:
+mkdir nginx-custom
+cd nginx-custom
+
+2. Создаём файл Dockerfile:
+nano Dockerfile
+
+3.Вставляем следующее содержимое:
+
 ```bash
 # Используем базовый образ nginx:1.21.1
 FROM nginx:1.21.1
