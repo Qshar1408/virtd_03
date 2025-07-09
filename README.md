@@ -100,6 +100,11 @@ html
 
 В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод.
 
+![virtd_03](https://github.com/Qshar1408/virtd_03/blob/main/img/virtd_005.png)
+
+![virtd_03](https://github.com/Qshar1408/virtd_03/blob/main/img/virtd_006.png)
+
+![virtd_03](https://github.com/Qshar1408/virtd_03/blob/main/img/virtd_007.png)
 
 ## Задача 3
 1. Воспользуйтесь docker help или google, чтобы узнать как подключиться к стандартному потоку ввода/вывода/ошибок контейнера "custom-nginx-t2".
