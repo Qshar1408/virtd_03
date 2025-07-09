@@ -185,7 +185,14 @@ services:
     - "5000:5000"
 ```
 
+![virtd_03](https://github.com/Qshar1408/virtd_03/blob/main/img/virtd_018.png)
+
 И выполните команду "docker compose up -d". Какой из файлов был запущен и почему? (подсказка: https://docs.docker.com/compose/compose-application-model/#the-compose-file )
+
+![virtd_03](https://github.com/Qshar1408/virtd_03/blob/main/img/virtd_019.png)
+
+Docker compose в связи с наличием нескольких файлов конфигураций, выбирает первый файл который он находит согласно внутреннему порядку приоритетов. В данном случае это файл compose.yaml
+
 
 2. Отредактируйте файл compose.yaml так, чтобы были запущенны оба файла. (подсказка: https://docs.docker.com/compose/compose-file/14-include/)
 
