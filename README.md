@@ -13,10 +13,21 @@
 ## Задача 1
 
 Сценарий выполнения задачи:
-- Установите docker и docker compose plugin на свою linux рабочую станцию или ВМ.
+- Установите docker и docker compose plugin на свою linux рабочую станцию или ВМ
+
+![virtd_03](https://github.com/Qshar1408/virtd_03/blob/main/img/virtd_001.png)
+
 - Если dockerhub недоступен создайте файл /etc/docker/daemon.json с содержимым: ```{"registry-mirrors": ["https://mirror.gcr.io", "https://daocloud.io", "https://c.163.com/", "https://registry.docker-cn.com"]}```
+
+#### dockerhub недоступен
+
+![virtd_03](https://github.com/Qshar1408/virtd_03/blob/main/img/virtd_002.png)
+
 - Зарегистрируйтесь и создайте публичный репозиторий  с именем "custom-nginx" на https://hub.docker.com (ТОЛЬКО ЕСЛИ У ВАС ЕСТЬ ДОСТУП);
 - скачайте образ nginx:1.21.1;
+
+![virtd_03](https://github.com/Qshar1408/virtd_03/blob/main/img/virtd_003.png)
+
 - Создайте Dockerfile и реализуйте в нем замену дефолтной индекс-страницы(/usr/share/nginx/html/index.html), на файл index.html с содержимым:
 ```
 <html>
@@ -28,8 +39,25 @@ Hey, Netology
 </body>
 </html>
 ```
+
+```bash
+# Используем базовый образ nginx:1.21.1
+FROM nginx:1.21.1
+
+# Удаляем дефолтный index.html
+RUN rm /usr/share/nginx/html/index.html
+
+# Копируем новый index.html в нужную директорию
+COPY index.html /usr/share/nginx/html/index.html
+
+# Открываем порт 80
+EXPOSE 80
+```
+
 - Соберите и отправьте созданный образ в свой dockerhub-репозитории c tag 1.0.0 (ТОЛЬКО ЕСЛИ ЕСТЬ ДОСТУП). 
 - Предоставьте ответ в виде ссылки на https://hub.docker.com/<username_repo>/custom-nginx/general .
+
+![virtd_03](https://github.com/Qshar1408/virtd_03/blob/main/img/virtd_004.png)
 
 ## Задача 2
 1. Запустите ваш образ custom-nginx:1.0.0 командой docker run в соответвии с требованиями:
