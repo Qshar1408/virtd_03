@@ -196,6 +196,22 @@ Docker compose в связи с наличием нескольких файло
 
 2. Отредактируйте файл compose.yaml так, чтобы были запущенны оба файла. (подсказка: https://docs.docker.com/compose/compose-file/14-include/)
 
+```bash
+version: "3"
+include:
+  - docker-compose.yaml
+services:
+   portainer:
+     image: portainer/portainer-ce:latest
+     network_mode: host
+     ports:
+       - "9000:9000"
+     volumes:
+       - /var/run/docker.sock:/var/run/docker.sock
+```
+
+![virtd_03](https://github.com/Qshar1408/virtd_03/blob/main/img/virtd_020.png)
+
 3. Выполните в консоли вашей хостовой ОС необходимые команды чтобы залить образ custom-nginx как custom-nginx:latest в запущенное вами, локальное registry. Дополнительная документация: https://distribution.github.io/distribution/about/deploying/
 4. Откройте страницу "https://127.0.0.1:9000" и произведите начальную настройку portainer.(логин и пароль адмнистратора)
 5. Откройте страницу "http://127.0.0.1:9000/#!/home", выберите ваше local  окружение. Перейдите на вкладку "stacks" и в "web editor" задеплойте следующий компоуз:
