@@ -122,11 +122,22 @@ html
 5. Зайдите в интерактивный терминал контейнера "custom-nginx-t2" с оболочкой bash.
 6. Установите любимый текстовый редактор(vim, nano итд) с помощью apt-get.
 7. Отредактируйте файл "/etc/nginx/conf.d/default.conf", заменив порт "listen 80" на "listen 81".
+
+![virtd_03](https://github.com/Qshar1408/virtd_03/blob/main/img/virtd_010.png)
+
 8. Запомните(!) и выполните команду ```nginx -s reload```, а затем внутри контейнера ```curl http://127.0.0.1:80 ; curl http://127.0.0.1:81```.
+
+![virtd_03](https://github.com/Qshar1408/virtd_03/blob/main/img/virtd_011.png)
+
 9. Выйдите из контейнера, набрав в консоли  ```exit``` или Ctrl-D.
 10. Проверьте вывод команд: ```ss -tlpn | grep 127.0.0.1:8080``` , ```docker port custom-nginx-t2```, ```curl http://127.0.0.1:8080```. Кратко объясните суть возникшей проблемы.
+
+![virtd_03](https://github.com/Qshar1408/virtd_03/blob/main/img/virtd_012.png)
+
 11. * Это дополнительное, необязательное задание. Попробуйте самостоятельно исправить конфигурацию контейнера, используя доступные источники в интернете. Не изменяйте конфигурацию nginx и не удаляйте контейнер. Останавливать контейнер можно. [пример источника](https://www.baeldung.com/linux/assign-port-docker-container)
 12. Удалите запущенный контейнер "custom-nginx-t2", не останавливая его.(воспользуйтесь --help или google)
+
+![virtd_03](https://github.com/Qshar1408/virtd_03/blob/main/img/virtd_013.png)
 
 В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод.
 
