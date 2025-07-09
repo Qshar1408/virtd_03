@@ -150,6 +150,13 @@ html
 - Добавьте ещё один файл в текущий каталог ```$(pwd)``` на хостовой машине.
 - Подключитесь во второй контейнер и отобразите листинг и содержание файлов в ```/data``` контейнера.
 
+![virtd_03](https://github.com/Qshar1408/virtd_03/blob/main/img/virtd_014.png)
+
+![virtd_03](https://github.com/Qshar1408/virtd_03/blob/main/img/virtd_015.png)
+
+![virtd_03](https://github.com/Qshar1408/virtd_03/blob/main/img/virtd_016.png)
+
+![virtd_03](https://github.com/Qshar1408/virtd_03/blob/main/img/virtd_017.png)
 
 В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод.
 
