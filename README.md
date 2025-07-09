@@ -65,10 +65,28 @@ COPY index.html /usr/share/nginx/html/index.html
 # Открываем порт 80
 EXPOSE 80
 ```
+4. Создаём файл index.htm
+```bash
+nano index.html
+
+5. Вставляем в него следующий HTML-код:
+```bash
+html
+Копировать код
+<html>
+<head>
+    Hey, Netology
+</head>
+<body>
+    <h1>I will be DevOps Engineer!</h1>
+</body>
+</html>
+```
 
 - Соберите и отправьте созданный образ в свой dockerhub-репозитории c tag 1.0.0 (ТОЛЬКО ЕСЛИ ЕСТЬ ДОСТУП). 
 - Предоставьте ответ в виде ссылки на https://hub.docker.com/<username_repo>/custom-nginx/general .
 
+#### Сборка кода и проверка:
 ![virtd_03](https://github.com/Qshar1408/virtd_03/blob/main/img/virtd_004.png)
 
 ## Задача 2
